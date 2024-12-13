@@ -1,0 +1,273 @@
+:root {
+    --primary-color: #429b30;
+    --background-color: rgba(0, 0, 0, 0.199);
+    --sombras: drop-shadow(10px 10px 20px rgba(47, 185, 34, 0.74));
+    --second-color: rgb(255, 255, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+a {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+body {
+    max-width: 100vw;
+    background-color: rgba(0, 0, 0, 0.719);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    h1{
+        color: var(--second-color);
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+li {
+    list-style: none;
+}
+li a {
+    color: var(--second-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav ul li a{
+    font-size: 1.5rem;
+}
+
+main {
+    flex: 1; /* Permite que el contenedor principal ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column; /* Acomoda las secciones verticalmente */
+}
+
+.seccion {
+    flex: 1;
+    padding: 0 3rem;
+    display: grid;
+}
+
+.firstSection {
+    background-color: var(--background-color);
+    grid-template-columns: 45% 45% 10%;
+}
+
+.infoContainer {
+    display: grid;
+    justify-content: center;
+
+
+    .info {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5em;
+    }
+    .linea-con-texto {
+        display: flex;
+        align-items: center;
+    }
+
+    .linea {
+        flex-grow: 0.2;
+        border-top: 2px solid var(--primary-color);
+        margin-right: 1em;
+    }
+    .texto {
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+}
+
+.imname {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--second-color);
+}
+.info {
+    font-size: 1.2em;
+    color: var(--primary-color);
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-weight: bold;
+    color: var(--second-color);
+    font-size: 1.2em;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.2em;
+    padding: 0 1em;
+
+}
+button:hover{
+    background-color: var(--primary-color);
+    border-radius: 0.2em;
+}
+
+figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-height: 35rem; /* Puede ser un ancho fijo o un porcentaje, depende de tu necesidad */
+     /* Puede ser un ancho fijo o un porcentaje, depende de tu necesidad */
+}
+
+figure img {
+    filter: var(--sombras);
+    max-width: 28rem; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: 100%; /* La altura se ajusta automáticamente para ser cuadrada */
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio del contenedor sin deformarse */
+}
+.redesContainer {
+    display: flex; /* Cambiar a flexbox para un mejor control */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los íconos y líneas horizontalmente */
+    gap: 20px; /* Espacio entre las líneas e íconos */
+    justify-content: end;
+    justify-content: center;
+}
+
+.redes {
+    display: flex; /* Flexbox para los íconos */
+    flex-direction: column; /* Alinea los íconos en columna */
+    gap: 10px; /* Espaciado entre los íconos */
+    z-index: 12;
+    align-items: normal;
+}
+
+.redes i {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    font-size: 2.7em; /* Tamaño del texto/icono */
+    width: 70px; /* Define un ancho fijo */
+    height: 70px; /* Define un alto fijo igual al ancho */
+    border-radius: 50%; /* Hace que el elemento sea circular */
+    background-color: var(--primary-color); /* Color de fondo del círculo */
+    color: #fff; /* Color del icono */
+}
+
+
+
+/*segunda seccion*/
+.secondSection {
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    color: var(--second-color);
+    padding: 3em;
+    gap: 2em;
+}
+.DescriptionServices {
+    display: flex;
+    justify-content: space-between;
+}
+.services {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    i {
+        font-size: 2.2em; /* Tamaño del texto/icono */
+        margin-bottom: 0.3em;
+        color: var(--primary-color);
+    }
+}
+
+
+/* Third Section */
+.threeSection {
+    flex: 1; /* Ocupa 1/3 del viewport */
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    color: #fff;
+    width: 100%;
+}
+.cajaForm{
+    display: grid;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 3em;
+    width: 40rem;
+    filter:drop-shadow(1px 1px 5px rgba(34, 255, 71, 0.459));
+
+}
+.cajaForm h2{
+    text-align: center;
+    font-size: 2.5rem;
+}
+.cajaForm p{
+    font-size: 1.1rem;
+}
+.cont input,textarea{
+width: 100%;
+border: .5px solid rgb(67, 218, 47);
+background-color: rgba(255, 255, 255, 0.164);
+font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .firstSection {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+
+    header {
+        display: grid;
+        justify-content: space-between;
+        text-align: center;
+        gap: 1em;
+        place-content: center;
+    }
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .redes {
+        display: flex; /* Flexbox para los íconos */
+        flex-direction: row; /* Alinea los íconos en columna */
+
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .redesContainer{
+        margin-bottom: 1em;
+    filter: var(--sombras);
+
+    }
+    .redes i{
+        filter:drop-shadow(1px 1px 5px rgba(255, 255, 255, 0.74));
+    }
+}
